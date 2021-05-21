@@ -24,7 +24,7 @@ function Products({ id, title, price, description, category, image }) {
                     <StarIcon className="h-5 text-yellow-500" />
                 )) }
             </div>
-            <p className="text-x my-2 line-clamp-2" >{description}</p>
+            <p className="text-xs my-2 line-clamp-2" >{description}</p>
             <div className="mb-5">
                 <Currency quantity={price} currency="INR" />
             </div>
