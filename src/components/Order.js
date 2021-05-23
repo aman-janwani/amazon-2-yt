@@ -30,10 +30,10 @@ function Order({ id, amount, amountShipping, images, timestamp, items }) {
                     <p className="text-xs font-bold">TOTAL</p>
                     <p>
                         <span className="font-bold">
-                            <Currency quantity={amount} currency="EUR" />
+                            <Currency quantity={amount} currency="INR" />
                         </span>{" "}
                         (Including{" "}
-                        <Currency quantity={amountShipping} currency="EUR" />{" "}
+                        <Currency quantity={amountShipping} currency="INR" />{" "}
                         for "<span className="italic">Next Day Delivery</span>")
                     </p>
                 </div>
