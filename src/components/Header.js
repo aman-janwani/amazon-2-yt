@@ -33,7 +33,7 @@ function Header() {
             <div className="bg-white w-80 absolute h-screen duration-100  z-50 overflow-x-hidden overflow-y-scroll " style={sidebaropen ? { "left": "0px" } : { "left": "-500px" }}>
                 {/* <XIcon className="absolute h-8 text-white -right-8 top-2 cursor-pointer" onClick={handleClose}/> */}
                 <div className="bg-amazon_blue-light w-full h-12 flex items-center">
-                    <div className=" mx-4 flex items-center space-x-4 text-white font-bold">
+                    <div className="flex items-center mx-4 space-x-4 text-white font-bold">
                         {session ? <Image src={session.user.image} height={50} width={50} className="rounded-full" /> : <UserCircleIcon className="h-8 text-white "/>}
                         <p>Hello, {session ? session.user.name : "User"}</p>
                     </div>
@@ -139,7 +139,9 @@ function Header() {
                         </p>
                         <p className="font-extrabold md:text-sm">Accounts & list</p>
                     </div>
-                    <div className="link">
+                    <div 
+                        onClick={() => router.push("/orders")}
+                        className="link">
                         <p>Returns</p>
                         <p className="font-extrabold md:text-sm">& Orders</p>
                     </div>
