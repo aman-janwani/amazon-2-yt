@@ -37,7 +37,7 @@ export default async (req, res) => {
         cancel_url: `${process.env.HOST}/checkout`,
         metadata: {
             email,
-            images: JSON.stringify(items.map(groupedImages),
+            images: JSON.stringify(groupedImages),
         }
     });
     console.log("session created!", session.id);
