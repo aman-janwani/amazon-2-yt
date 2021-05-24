@@ -19,6 +19,10 @@ export default async (req, res) => {
             },
         },
     }));
+    
+     const groupedImages = Object.values(
+            groupBy(items.map((item) => path.basename(item.image)))
+        ).map((group) => [group.length, group[0]]);
 
 
     const session = await stripe.checkout.sessions.create({
