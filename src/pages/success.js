@@ -18,7 +18,7 @@ function success() {
                     <p>
                     Thank you for shopping with us. We'll send a confirmation once your item has shipped, if you would like to check the status of your order(s) please press the link below.
                     </p>
-                    <button onClick={() => router.push("/orders")} className="button mt-8">Go yo my orders</button>
+                    <button onClick={() => router.push("/orders")} className="button mt-8">Go to my orders</button>
                 </div>
             </main>
         </div>
