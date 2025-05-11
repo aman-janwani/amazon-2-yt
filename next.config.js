@@ -1,6 +1,6 @@
-const withPWA = require("next-pwa");
+// const withPWA = require("next-pwa");
 
-module.exports = withPWA({
+module.exports = {
     pwa: {
     	dest: "public",
     	register: true,
@@ -13,4 +13,4 @@ module.exports = withPWA({
     env: {
         stripe_public_key: process.env.STRIPE_PUBLIC_KEY
     }
-});
+};
