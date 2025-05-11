@@ -6,6 +6,12 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const path = require("path");
 
 export default async (req, res) => {
+    if (req.method !== 'POST') {
+        res.setHeader('Allow', 'POST');
+        res.status(405).end('Method Not Allowed');
+        return;
+    }
+
     //we are destructuring the object and storing them in
     // 2 var i.e items and email
     const { items , email } = req.body;
